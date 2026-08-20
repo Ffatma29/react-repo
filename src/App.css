@@ -1,0 +1,387 @@
+* {
+ box-sizing: border-box;
+}
+body {
+ margin: 0;
+ font-family: Arial, sans-serif;
+ background: #090909;
+ color: white;
+}
+button {
+ font-family: inherit;
+}
+/* Dashboard */
+.dashboard {
+ min-height: 100vh;
+ display: flex;
+ background:
+   radial-gradient(circle at top right, #202020 0%, #090909 45%);
+}
+/* Sidebar */
+.sidebar {
+ width: 240px;
+ min-height: 100vh;
+ background: #111111;
+ border-right: 1px solid #292929;
+ padding: 30px 20px;
+ display: flex;
+ flex-direction: column;
+ position: fixed;
+ left: 0;
+ top: 0;
+}
+.logo {
+ font-size: 22px;
+ font-weight: bold;
+ margin-bottom: 50px;
+}
+.logo span {
+ margin-left: 8px;
+}
+.sidebar nav {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+.sidebar nav a {
+ padding: 14px;
+ border-radius: 10px;
+ color: #999;
+ text-decoration: none;
+ cursor: pointer;
+ transition: 0.3s;
+}
+.sidebar nav a:hover,
+.sidebar nav .active {
+ background: #252525;
+ color: white;
+}
+.profile {
+ margin-top: auto;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ padding-top: 20px;
+ border-top: 1px solid #292929;
+}
+.avatar {
+ width: 42px;
+ height: 42px;
+ background: #ffffff;
+ color: #111;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: bold;
+}
+.profile strong {
+ display: block;
+}
+.profile span {
+ color: #777;
+ font-size: 13px;
+}
+/* Main */
+.main-content {
+ margin-left: 240px;
+ width: calc(100% - 240px);
+ padding: 35px 45px;
+}
+/* Header */
+.header {
+ margin-bottom: 25px;
+}
+.header h1 {
+ font-size: 28px;
+ margin-bottom: 5px;
+}
+.header p {
+ color: #888;
+}
+/* Welcome */
+.welcome {
+ background: linear-gradient(135deg, #1d1d1d, #111111);
+ border: 1px solid #2c2c2c;
+ border-radius: 20px;
+ padding: 30px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 35px;
+}
+.small-title {
+ color: #888;
+ font-size: 12px;
+ font-weight: bold;
+ letter-spacing: 2px;
+}
+.welcome h1 {
+ font-size: 32px;
+ margin: 10px 0;
+}
+.welcome p {
+ color: #999;
+}
+/* Stats */
+.stats {
+ display: flex;
+ gap: 15px;
+}
+.stat-card {
+ min-width: 120px;
+ background: #242424;
+ border: 1px solid #333;
+ border-radius: 14px;
+ padding: 18px;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+}
+.stat-card span {
+ font-size: 25px;
+}
+.stat-card strong {
+ font-size: 24px;
+}
+.stat-card p {
+ margin: 3px 0 0;
+ font-size: 12px;
+}
+/* Courses Header */
+.courses-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 20px;
+}
+.courses-header h2 {
+ margin: 0 0 5px;
+}
+.courses-header p {
+ margin: 0;
+ color: #777;
+}
+.toggle-btn {
+ background: white;
+ color: black;
+ border: none;
+ padding: 11px 20px;
+ border-radius: 8px;
+ font-weight: bold;
+ cursor: pointer;
+}
+/* Course List */
+.course-list {
+ width: 100%;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 20px;
+}
+/* Course Card */
+.course-card {
+ background: #171717;
+ border: 1px solid #292929;
+ border-radius: 18px;
+ overflow: hidden;
+ transition: 0.3s;
+}
+.course-card:hover {
+ transform: translateY(-7px);
+ border-color: #555;
+ box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+.course-icon {
+ height: 130px;
+ background: linear-gradient(135deg, #292929, #151515);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 60px;
+}
+.course-content {
+ padding: 20px;
+}
+.course-content h2 {
+ font-size: 19px;
+ margin: 12px 0;
+}
+.instructor {
+ color: #999;
+ font-size: 14px;
+}
+/* Status */
+.status {
+ display: inline-block;
+ padding: 5px 10px;
+ border-radius: 20px;
+ font-size: 11px;
+ font-weight: bold;
+}
+.status.active {
+ background: #173b2a;
+ color: #5ee89a;
+}
+.status.completed {
+ background: #333333;
+ color: #ffffff;
+}
+/* Progress */
+.progress-label {
+ display: flex;
+ justify-content: space-between;
+ color: #888;
+ font-size: 12px;
+ margin-top: 18px;
+ margin-bottom: 7px;
+}
+.progress-bar {
+ width: 100%;
+ height: 7px;
+ background: #303030;
+ border-radius: 10px;
+ overflow: hidden;
+}
+.progress {
+ height: 100%;
+ background: white;
+ border-radius: 10px;
+}
+/* Buttons */
+.view-btn,
+.start-btn {
+ width: 100%;
+ margin-top: 18px;
+ padding: 11px;
+ border: none;
+ border-radius: 8px;
+ background: #272727;
+ color: white;
+ cursor: pointer;
+ transition: 0.3s;
+}
+.view-btn:hover,
+.start-btn:hover {
+ background: white;
+ color: black;
+}
+/* Selected Course */
+.selected-course {
+ margin-top: 30px;
+ padding: 25px;
+ background: #171717;
+ border: 1px solid #333;
+ border-radius: 18px;
+ display: flex;
+ gap: 25px;
+ align-items: center;
+}
+.selected-icon {
+ width: 110px;
+ height: 110px;
+ border-radius: 15px;
+ background: #252525;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 55px;
+}
+.selected-info {
+ flex: 1;
+}
+.selected-info h2 {
+ margin: 5px 0 15px;
+}
+.selected-info p {
+ color: #999;
+}
+.start-btn {
+ width: 200px;
+}
+/* Responsive */
+@media (max-width: 1200px) {
+ .course-list {
+   grid-template-columns: repeat(2, 1fr);
+ }
+ .welcome {
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 25px;
+ }
+}
+@media (max-width: 700px) {
+ .sidebar {
+   display: none;
+ }
+ .main-content {
+   margin-left: 0;
+   width: 100%;
+   padding: 25px;
+ }
+ .course-list {
+   grid-template-columns: 1fr;
+ }
+ .stats {
+   width: 100%;
+   flex-wrap: wrap;
+ }
+ .selected-course {
+   flex-direction: column;
+   align-items: flex-start;
+ }
+}
+.my-courses {
+ margin-top: 20px;
+}
+.empty-courses {
+ background: #171717;
+ border: 1px solid #292929;
+ border-radius: 18px;
+ padding: 60px;
+ text-align: center;
+}
+.empty-courses span {
+ font-size: 50px;
+}
+.empty-courses h3 {
+ margin: 15px 0 8px;
+}
+.empty-courses p {
+ color: #777;
+}
+.search-box {
+ display: flex;
+ align-items: center;
+ width: 100%;
+ max-width: 450px;
+ margin-bottom: 25px;
+ background: #171717;
+ border: 1px solid #333;
+ border-radius: 12px;
+ overflow: hidden;
+}
+.search-box input {
+ flex: 1;
+ background: transparent;
+ border: none;
+ outline: none;
+ color: white;
+ padding: 14px 16px;
+ font-size: 15px;
+}
+.search-box input::placeholder {
+ color: #777;
+}
+.search-box button {
+ background: #252525;
+ border: none;
+ color: white;
+ padding: 14px 18px;
+ cursor: pointer;
+ font-size: 17px;
+ transition: 0.3s;
+}
+.search-box button:hover {
+ background: white;
+ color: black;
+}
